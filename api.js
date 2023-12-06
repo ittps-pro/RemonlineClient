@@ -1,7 +1,19 @@
 const { default: fetch } = require("node-fetch")
 const fs = require('fs');
-
+const axios = require("axios")
 /**@class RemOnlineClient*/
+
+class WebhookApi {
+
+    constructor(apiKeyPath, apiTokenPath) {
+        this._apiKeyPath = apiKeyPath;
+        this._apiTokenPath = apiTokenPath
+        this._apiKey = require(this._apiKeyPath).apiKey;
+        this._token = require(this._apiTokenPath).token;
+        this._baseUrl = 'https://api.remonline.ru/';
+    }
+}
+
 class RemOnlineClient {
     /**@constructor
      * @param {String} apiKeyPath - path to file .JSON with apiKey in JSON ({"apiKey": "xxxxxx"})
