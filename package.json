@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "api client for working with remonline by api. Allows you for get/create orders and clients and get branches and statuses",
-  "main": "remo.js",
+  "main": "api.js",
   "scripts": {
     "test": "test",
     "dev": "node dev.js"
